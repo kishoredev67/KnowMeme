@@ -155,7 +155,7 @@ export default function CaptionPanel({
                />
                <div {...stylex.props(styles.shareInfo)}>
                   <span {...stylex.props(styles.shareName)}>{userData?.full_name}</span>
-                  <span {...stylex.props(styles.shareMeta)}>Clonedbook · Public</span>
+                  <span {...stylex.props(styles.shareMeta)}>KnowMeme · Public</span>
                </div>
                <Toggle
                   checked={postSettings.shareToClonedbook}

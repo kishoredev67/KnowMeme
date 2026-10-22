@@ -21,19 +21,25 @@ export const styles = stylex.create({
       flexDirection: 'column',
       alignItems: 'center',
    },
-   clonagramLogo: {
+   knowmemeLogo: {
       position: 'absolute',
       top: 0,
       left: 0,
    },
    description: {
-      fontSize: '2.65vw',
-      fontWeight: '350',
-      width: 'min(90%, 700px)',
+      fontSize: '2.4vw',
+      fontWeight: '400',
+      width: 'min(90%, 720px)',
       display: 'block',
       lineHeight: '1.35',
       color: colors.textPrimary,
       textAlign: 'center',
+      letterSpacing: '-0.02em',
+   },
+   trustHighlight: {
+      fontWeight: '700',
+      color: colors.brandGreen,
+      display: 'inline',
    },
    imagesContainer: {
       display: 'flex',
@@ -62,6 +68,10 @@ export const imageCardStyles = stylex.create({
       aspectRatio: '13 / 24',
       borderRadius: radius.xxl,
       overflow: 'hidden',
+      boxShadow: '0 12px 36px rgba(0,0,0,0.25)',
+      borderWidth: '1px',
+      borderStyle: 'solid',
+      borderColor: colors.border,
       ':first-child': {
          marginLeft: '-11.9vw',
       },
@@ -76,7 +86,7 @@ export const imageCardStyles = stylex.create({
       left: '50%',
       transform: 'translateX(-50%)',
       height: '4px',
-      backgroundColor: 'rgb(255, 255, 255, 0.3)',
+      backgroundColor: 'rgba(255, 255, 255, 0.3)',
       borderRadius: radius.full,
       display: 'flex',
       alignItems: 'center',
@@ -85,12 +95,12 @@ export const imageCardStyles = stylex.create({
    highlightedPart: {
       width: '60%',
       height: '100%',
-      backgroundColor: 'rgb(255, 255, 255)',
+      backgroundColor: colors.brandGreen,
    },
    dimmedPart: {
       width: '40%',
       height: '100%',
-      backgroundColor: 'rgb(255, 255, 255, 0.3)',
+      backgroundColor: 'rgba(255, 255, 255, 0.3)',
    },
    reactionBoxContainer: {
       position: 'absolute',
@@ -113,9 +123,9 @@ export const imageCardStyles = stylex.create({
    commentBorder: {
       width: '100%',
       height: '32px',
-      borderWidth: '3px',
+      borderWidth: '2px',
       borderStyle: 'solid',
-      borderColor: '#ffffff',
+      borderColor: 'rgba(255, 255, 255, 0.8)',
       borderRadius: radius.full,
    },
 });

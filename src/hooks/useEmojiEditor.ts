@@ -4,7 +4,7 @@ import type { EmojiClickData } from 'emoji-picker-react';
 import { useEffect, useRef, useState } from 'react';
 import { useClickOutside } from '@/src/hooks/useClickOutside';
 
-export const PICKER_CLASS = 'clonagram-emoji-picker';
+export const PICKER_CLASS = 'knowmeme-emoji-picker';
 
 export const pickerOverrideCSS = `
    .epr-dark-theme.${PICKER_CLASS} {

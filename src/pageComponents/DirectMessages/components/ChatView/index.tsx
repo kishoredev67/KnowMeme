@@ -227,7 +227,7 @@ export default function ChatView({
                      style={styles.chatProfileUsername}
                      userProfile={otherParticipant}
                   />
-                  <div {...stylex.props(styles.chatProfileSubtitle)}>Clonagram</div>
+                  <div {...stylex.props(styles.chatProfileSubtitle)}>KnowMeme</div>
                   <Link
                      href={`/profile/${otherParticipant.username}`}
                      {...stylex.props(styles.chatProfileButton)}

@@ -10,9 +10,9 @@ import z from 'zod';
 import AuthPagesFooter from '@/src/components/AuthPagesFooter';
 import BirthdatePicker from '@/src/components/BirthdatePicker';
 import EmailSignupInput from '@/src/components/EmailSignupInput';
+import KnowMemeLogo from '@/src/components/KnowMemeLogo';
 import LoginPageButton from '@/src/components/LoginPageButton';
 import UsernameSignupInput from '@/src/components/UsernameSignupInput';
-import ZetaLogo from '@/src/components/ZetaLogo';
 import { useUsernameAvailability } from '@/src/hooks/useUsernameAvailability';
 import { supabase } from '@/src/lib/supabase/client';
 import { usernameSchema } from '@/src/lib/validation';
@@ -99,10 +99,10 @@ export default function EmailSignUpPage() {
                <MdChevronLeft size={28} />
             </Link>
             <div {...stylex.props(styles.contentContainer)}>
-               <ZetaLogo />
-               <h1 {...stylex.props(styles.title)}>Get started on Clonagram</h1>
+               <KnowMemeLogo size="md" showTagline={false} />
+               <h1 {...stylex.props(styles.title)}>Get started on KnowMeme</h1>
                <span {...stylex.props(styles.description)}>
-                  Sign up to see photos and videos from your friends.
+                  Join authentic creators with AI-Powered Digital Trust.
                </span>
                <form onSubmit={handleSubmit(onSubmit)} style={{ display: 'contents' }}>
                   <EmailSignupInput
@@ -158,17 +158,17 @@ export default function EmailSignUpPage() {
                   <div {...stylex.props(styles.policyText)}>
                      <span>
                         People who use our service may have uploaded your contact information to
-                        Instagram.{' '}
+                        KnowMeme.{' '}
                         <Link href="/" {...stylex.props(styles.accentLink)}>
                            Learn more.
                         </Link>
                      </span>
                      <span {...stylex.props(styles.policyParagraph)}>
-                        By tapping Submit, you agree to create an account and to Instagram&apos;s{' '}
+                        By tapping Submit, you agree to create an account and to KnowMeme&apos;s{' '}
                         <Link href="/" {...stylex.props(styles.accentLink)}>
                            Terms.
                         </Link>{' '}
-                        Learn how we collect, use and share your data in our{' '}
+                        Learn how we collect, use and protect your data in our{' '}
                         <Link href="/" {...stylex.props(styles.accentLink)}>
                            Privacy Policy
                         </Link>{' '}

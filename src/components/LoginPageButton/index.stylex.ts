@@ -12,7 +12,6 @@ export const styles = stylex.create({
       borderRadius: radius.xl,
       fontWeight: 500,
       fontSize: '15px',
-      cursor: 'pointer',
       ':disabled': {
          cursor: 'not-allowed',
       },

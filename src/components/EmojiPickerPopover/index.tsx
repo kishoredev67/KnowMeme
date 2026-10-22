@@ -18,7 +18,7 @@ export default function EmojiPickerPopover({ onEmojiClick, width = 280 }: EmojiP
    const isDark = useThemeStore(s => s.isDark);
    return (
       <>
-         <style href="clonagram-emoji-picker-override" precedence="default">
+         <style href="knowmeme-emoji-picker-override" precedence="default">
             {pickerOverrideCSS}
          </style>
          <EmojiPicker

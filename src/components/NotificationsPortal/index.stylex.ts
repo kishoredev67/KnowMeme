@@ -153,11 +153,10 @@ export const styles = stylex.create({
       padding: '12px',
       fontSize: '14px',
       fontWeight: 600,
-      color: colors.textPrimary,
+      color: colors.white,
       backgroundColor: colors.primaryButton,
       border: 'none',
       borderRadius: radius.lg,
-      cursor: 'pointer',
       ':hover': {
          opacity: 0.9,
       },
@@ -239,12 +238,11 @@ export const styles = stylex.create({
    followButton: {
       fontSize: '14px',
       fontWeight: 600,
-      color: colors.textPrimary,
+      color: colors.white,
       backgroundColor: colors.primaryButton,
       border: 'none',
       borderRadius: radius.lg,
       padding: '7px 16px',
-      cursor: 'pointer',
       flexShrink: 0,
       ':hover': {
          opacity: 0.9,

@@ -13,7 +13,7 @@ export const styles = stylex.create({
       gap: '4px',
    },
    verifiedBadge: {
-      color: colors.accentText,
+      color: colors.brandGreen,
       flexShrink: 0,
    },
    overlay: {

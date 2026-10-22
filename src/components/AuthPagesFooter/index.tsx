@@ -4,21 +4,17 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 import { styles } from './index.stylex';
 
 export const footerLinks = [
-   'Zeta',
-   'About',
-   'Blog',
-   'Jobs',
-   'Help',
+   'About KnowMeme',
+   'Digital Trust',
+   'Community Guidelines',
+   'Transparency',
+   'Help Center',
    'API',
-   'Privacy',
+   'Privacy Policy',
    'Cookie Settings',
-   'Terms',
-   'Locations',
-   'Clonagram Lite',
-   'Zeta AI',
-   'Threads',
-   'Contact Uploading & Non-Users',
-   'Zeta Verified',
+   'Terms of Service',
+   'Creator Verification',
+   'Safety & Integrity',
 ] as const;
 
 export default function AuthPagesFooter({ ...props }: React.ComponentProps<'footer'>) {
@@ -36,7 +32,7 @@ export default function AuthPagesFooter({ ...props }: React.ComponentProps<'foot
                English
                <MdKeyboardArrowDown size={14} />
             </button>
-            <span>© {new Date().getFullYear()} Clonagram from Zeta</span>
+            <span>© {new Date().getFullYear()} KnowMeme · AI-Powered Digital Trust</span>
          </div>
       </footer>
    );

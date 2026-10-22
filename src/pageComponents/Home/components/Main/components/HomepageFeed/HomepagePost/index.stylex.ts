@@ -1,5 +1,5 @@
 import * as stylex from '@stylexjs/stylex';
-import { colors } from '../../../../../../../styles/tokens.stylex';
+import { colors, radius } from '../../../../../../../styles/tokens.stylex';
 
 export const styles = stylex.create({
    root: {
@@ -7,18 +7,29 @@ export const styles = stylex.create({
       flexDirection: 'column',
       margin: '0 auto',
       width: '100%',
-      maxWidth: '468px',
+      maxWidth: '472px',
+      backgroundColor: colors.bgElevated,
+      borderRadius: radius.xl,
+      borderWidth: '1px',
+      borderStyle: 'solid',
+      borderColor: colors.border,
+      padding: '12px 0 16px',
+      boxShadow: '0 4px 24px rgba(0, 0, 0, 0.06)',
+      overflow: 'hidden',
    },
    header: {
       display: 'flex',
       alignItems: 'center',
       gap: '4px',
-      padding: '0 8px 0 16px',
-      marginBottom: '16px',
+      padding: '0 14px 12px 16px',
    },
    actionsIcon: {
       marginLeft: 'auto',
       fontSize: '1.2rem',
+      color: colors.textSecondary,
+      ':hover': {
+         color: colors.textPrimary,
+      },
    },
    topUsername: {
       fontSize: '0.9rem',
@@ -31,13 +42,13 @@ export const styles = stylex.create({
       color: colors.textSecondary,
    },
    createdAt: {
-      fontSize: '0.9rem',
+      fontSize: '0.85rem',
       color: colors.textSecondary,
    },
    iconsBar: {
       display: 'flex',
-      alignItems: 'baseline',
-      gap: '12px',
+      alignItems: 'center',
+      gap: '14px',
       width: '100%',
       marginTop: '12px',
       padding: '0 16px',
@@ -51,13 +62,18 @@ export const styles = stylex.create({
    iconBarItemButton: {
       display: 'flex',
       alignItems: 'center',
-      gap: '4px',
+      gap: '6px',
       fontWeight: 600,
+      fontSize: '0.9rem',
       color: colors.textPrimary,
+      transition: 'opacity 0.15s ease',
+      ':hover': {
+         opacity: 0.8,
+      },
    },
    descriptionContainer: {
-      marginTop: '8px',
-      marginLeft: '16px',
+      marginTop: '10px',
+      padding: '0 16px',
    },
    bottomUsername: {
       fontSize: '0.9rem',
@@ -67,6 +83,7 @@ export const styles = stylex.create({
    description: {
       fontSize: '0.9rem',
       color: colors.textPrimary,
+      lineHeight: 1.45,
    },
    avatarImage: {
       borderRadius: '50%',

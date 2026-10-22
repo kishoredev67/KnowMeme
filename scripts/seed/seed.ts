@@ -151,7 +151,7 @@ async function seedProfile(profile: SeedProfile, display: ProgressDisplay) {
 
       const { error: authError } = await supabase.auth.admin.createUser({
          id: profile.id,
-         email: `ai.${profile.id}@clonagram.seed`,
+         email: `ai.${profile.id}@knowmeme.seed`,
          password: randomUUID(),
          email_confirm: true,
       });

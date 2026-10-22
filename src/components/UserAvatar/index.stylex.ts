@@ -24,7 +24,7 @@ export const styles = stylex.create({
       display: 'inline-flex',
       flexShrink: 0,
       borderRadius: radius.full,
-      backgroundImage: 'linear-gradient(45deg, #f09433, #bc1888)',
+      backgroundImage: `linear-gradient(135deg, ${colors.storyGradientStart}, ${colors.storyGradientEnd})`,
       padding: 'var(--ring-width, 2px)',
       margin: 'calc(-1 * var(--ring-width, 2px))',
    },

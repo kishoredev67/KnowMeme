@@ -57,7 +57,7 @@ export default function UnsplashAttribution({
       <span {...stylex.props(styles.root, isOverlay ? styles.overlayRoot : styles.inlineRoot)}>
          Photo by{' '}
          <a
-            href={`${attribution.photographerUrl}?utm_source=clonagram&utm_medium=referral`}
+            href={`${attribution.photographerUrl}?utm_source=knowmeme&utm_medium=referral`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={e => e.stopPropagation()}
@@ -67,7 +67,7 @@ export default function UnsplashAttribution({
          </a>
          {' on '}
          <a
-            href="https://unsplash.com/?utm_source=clonagram&utm_medium=referral"
+            href="https://unsplash.com/?utm_source=knowmeme&utm_medium=referral"
             target="_blank"
             rel="noopener noreferrer"
             onClick={e => e.stopPropagation()}

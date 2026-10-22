@@ -18,6 +18,7 @@ import {
 } from 'react-icons/md';
 import UserAvatar from '@/src/components/UserAvatar';
 import { useNotificationsPortalStore, useSearchPortalStore } from '@/src/store/createModalStore';
+import { colors } from '../../styles/tokens.stylex';
 import { CreateMenuPopover } from '../CreateMenuPopover';
 import type { MainSidebarStyles } from './index.stylex';
 
@@ -95,7 +96,12 @@ export function NavItems({ mainSidebarStyles, profile, isAnonymous }: NavItemsPr
                         username={profile?.username ?? ''}
                      />
                   ) : (
-                     IconComponent && <IconComponent size={28} />
+                     IconComponent && (
+                        <IconComponent
+                           size={28}
+                           style={{ color: isActive ? colors.brandOrange : 'currentColor' }}
+                        />
+                     )
                   );
 
                const content = (

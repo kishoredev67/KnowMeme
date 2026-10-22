@@ -63,7 +63,6 @@ export const styles = stylex.create({
       flexDirection: 'column',
       alignItems: 'center',
       gap: '6px',
-      cursor: 'pointer',
       flexShrink: 0,
    },
    storyUsername: {

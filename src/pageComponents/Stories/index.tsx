@@ -7,6 +7,7 @@ import { MdClose } from 'react-icons/md';
 import { recordStoryView } from '@/src/actions/story/recordStoryView';
 import EditHighlightStoriesModal from '../../components/EditHighlightStoriesModal';
 import HighlightActionsModal from '../../components/HighlightActionsModal';
+import KnowMemeLogo from '../../components/KnowMemeLogo';
 import StoryCard from './components/StoryCard';
 import StoryNavigationButton from './components/StoryNavigationButton';
 import { DESKTOP_GAP, DESKTOP_SIDE_H, DESKTOP_SIDE_W, SWIPE_THRESHOLD } from './constants';
@@ -137,8 +138,8 @@ export default function StoriesPage({
 
    return (
       <div {...stylex.props(styles.root)} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
-         <Link href="/" {...stylex.props(styles.titleLink)}>
-            <h1 {...stylex.props(styles.titleLinkText)}>Clonagram</h1>
+         <Link href="/" aria-label="KnowMeme Home" {...stylex.props(styles.titleLink)}>
+            <KnowMemeLogo size="md" showTagline={false} />
          </Link>
          <Link href={closeHref} {...stylex.props(styles.closeLink)}>
             <MdClose size={38} />

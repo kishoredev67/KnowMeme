@@ -1,14 +1,16 @@
-# Clonagram
+# KnowMeme
+
+**AI-Powered Digital Trust**
 
 ## About the project
 
-Clonagram is a feature-rich clone of Instagram, replicating much of the experience found on the feed, profile, explore, reels, stories, and direct messages screens. It focuses on a polished, responsive interface with dark mode and smooth interactions built from portals, poppers, hover cards, and modals.
+KnowMeme is a next-generation social platform designed around authentic connections, creator verification, and digital trust. Built on a high-performance Next.js and StyleX foundation, it combines responsive feeds, stories, reels, explore discovery, and direct messaging with a cohesive brand identity centered on integrity and trust.
 
-The interface closely follows the original design, is fully responsive, and ships with light and dark themes. Components live in small, focused folders, each owning its own markup and styles, and interactivity is pushed to the leaves of a mostly Server Component tree.
+The interface features an original design system inspired by the official KnowMeme identity: Midnight Navy, Vibrant Orange, Trust Green, Digital Cyan, and Soft White. It ships with responsive layouts, light and dark themes, accessible contrast, and smooth micro-interactions.
 
-Authentication is handled by Supabase, supporting Google OAuth and email sign-up.
+Authentication is handled securely by Supabase, supporting Google OAuth, email signup, and anonymous exploration.
 
-Data is stored in Supabase (Postgres, Storage, and Realtime) and videos are processed and streamed through Mux.
+Data is stored and synchronized through Supabase (Postgres, Storage, and Realtime), with video processing and streaming powered by Mux.
 
 ## Implemented Features
 

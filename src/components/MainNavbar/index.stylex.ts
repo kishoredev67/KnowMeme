@@ -61,7 +61,6 @@ export const styles = stylex.create({
       transition: 'background-color 0.15s ease',
       backgroundColor: 'transparent',
       borderWidth: 0,
-      cursor: 'pointer',
       ':hover': {
          backgroundColor: colors.buttonHover,
       },
@@ -97,6 +96,17 @@ export const styles = stylex.create({
    },
    logo: {
       display: 'flex',
+      '@media (max-width: 767px)': {
+         display: 'none',
+      },
+   },
+   logoLink: {
+      display: 'flex',
+      alignItems: 'center',
+      padding: '8px 4px',
+      borderRadius: radius.md,
+      textDecoration: 'none',
+      width: 'fit-content',
       '@media (max-width: 767px)': {
          display: 'none',
       },

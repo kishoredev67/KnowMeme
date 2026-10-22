@@ -15,8 +15,39 @@ const chivo = localFont({
 });
 
 export const metadata: Metadata = {
-   title: 'Clonagram',
-   description: 'Instagram clone',
+   title: {
+      default: 'KnowMeme | AI-Powered Digital Trust',
+      template: '%s | KnowMeme',
+   },
+   description:
+      'KnowMeme is the next-generation social platform designed around authentic connections, creator verification, and digital trust.',
+   applicationName: 'KnowMeme',
+   icons: {
+      icon: '/knowmeme-logo.png',
+      apple: '/knowmeme-logo.png',
+   },
+   openGraph: {
+      title: 'KnowMeme | AI-Powered Digital Trust',
+      description:
+         'Next-generation social platform centered on digital trust, authentic connections, and verified creators.',
+      siteName: 'KnowMeme',
+      images: [
+         {
+            url: '/knowmeme-banner.png',
+            width: 1024,
+            height: 571,
+            alt: 'KnowMeme — AI-Powered Digital Trust',
+         },
+      ],
+      type: 'website',
+   },
+   twitter: {
+      card: 'summary_large_image',
+      title: 'KnowMeme | AI-Powered Digital Trust',
+      description:
+         'Next-generation social platform centered on digital trust, authentic connections, and verified creators.',
+      images: ['/knowmeme-banner.png'],
+   },
 };
 
 export const viewport = {

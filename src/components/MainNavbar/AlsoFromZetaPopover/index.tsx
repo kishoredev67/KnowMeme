@@ -3,7 +3,8 @@
 import { Popover, PopoverContent, PopoverTrigger } from '@radix-ui/react-popover';
 import * as stylex from '@stylexjs/stylex';
 import Image from 'next/image';
-import { MdGridView } from 'react-icons/md';
+import Link from 'next/link';
+import { MdOutlineGppGood, MdOutlineShield, MdSecurity } from 'react-icons/md';
 import type { MainSidebarStyles } from '../index.stylex';
 import { styles } from './index.stylex';
 
@@ -15,30 +16,51 @@ export function AlsoFromZetaPopover({ mainSidebarStyles }: AlsoFromZetaPopoverPr
    return (
       <Popover>
          <PopoverTrigger asChild>
-            <button aria-label="Other apps from Zeta" {...stylex.props(mainSidebarStyles.navItem)}>
-               <MdGridView size={28} />
-               <span {...stylex.props(mainSidebarStyles.navItemLabel)}>Also from Zeta</span>
+            <button aria-label="Digital Trust Hub" {...stylex.props(mainSidebarStyles.navItem)}>
+               <MdOutlineShield size={28} />
+               <span {...stylex.props(mainSidebarStyles.navItemLabel)}>Digital Trust</span>
             </button>
          </PopoverTrigger>
          <PopoverContent side="top" sideOffset={8} {...stylex.props(styles.root)}>
-            <a
-               href="https://clonedbook.vercel.app/"
-               target="_blank"
-               rel="noopener noreferrer"
-               {...stylex.props(styles.item)}
-            >
+            <div {...stylex.props(styles.header)}>
                <Image
-                  src="/clonedbook-logo-200.png"
-                  alt="Clonedbook"
-                  width={36}
-                  height={36}
-                  {...stylex.props(styles.logo)}
+                  src="/knowmeme-logo.png"
+                  alt="KnowMeme"
+                  width={24}
+                  height={24}
+                  style={{ borderRadius: '6px' }}
                />
-               <div {...stylex.props(styles.itemText)}>
-                  <span {...stylex.props(styles.itemTitle)}>Clonedbook</span>
-                  <span {...stylex.props(styles.itemSubtitle)}>A cloned Facebook experience</span>
+               <div {...stylex.props(styles.headerText)}>
+                  <span {...stylex.props(styles.headerTitle)}>KnowMeme Trust</span>
+                  <span {...stylex.props(styles.headerTagline)}>AI-Powered Digital Trust</span>
                </div>
-            </a>
+            </div>
+
+            <div {...stylex.props(styles.separator)} />
+
+            <Link href="/" {...stylex.props(styles.item)}>
+               <div {...stylex.props(styles.itemIcon)}>
+                  <MdOutlineGppGood size={20} />
+               </div>
+               <div {...stylex.props(styles.itemText)}>
+                  <span {...stylex.props(styles.itemTitle)}>Authentic Community</span>
+                  <span {...stylex.props(styles.itemSubtitle)}>
+                     Verified profiles & real creators
+                  </span>
+               </div>
+            </Link>
+
+            <Link href="/" {...stylex.props(styles.item)}>
+               <div {...stylex.props(styles.itemIcon)}>
+                  <MdSecurity size={20} />
+               </div>
+               <div {...stylex.props(styles.itemText)}>
+                  <span {...stylex.props(styles.itemTitle)}>Safety & Transparency</span>
+                  <span {...stylex.props(styles.itemSubtitle)}>
+                     Privacy-first digital standards
+                  </span>
+               </div>
+            </Link>
          </PopoverContent>
       </Popover>
    );

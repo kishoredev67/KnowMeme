@@ -104,7 +104,7 @@ export default function ProfileHeader({
             <div {...stylex.props(styles.infoSection)}>
                <div {...stylex.props(styles.usernameRow)}>
                   <h2 {...stylex.props(styles.username)}>{userProfile.username}</h2>
-                  {userProfile.is_verified && <MdVerified size={20} color={colors.accentText} />}
+                  {userProfile.is_verified && <MdVerified size={20} color={colors.brandGreen} />}
                </div>
                {(userProfile.full_name || userProfile.bio) && (
                   <div {...stylex.props(styles.bioRow)}>

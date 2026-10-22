@@ -52,7 +52,6 @@ export const styles = stylex.create({
       fontSize: '0.8rem',
       fontWeight: 600,
       color: colors.accent,
-      textDecoration: 'none',
       flexShrink: 0,
       ':hover': {
          color: colors.accentHover,
@@ -73,7 +72,6 @@ export const styles = stylex.create({
       fontSize: '0.75rem',
       fontWeight: 600,
       color: colors.textPrimary,
-      textDecoration: 'none',
       ':hover': {
          color: colors.textSecondary,
       },

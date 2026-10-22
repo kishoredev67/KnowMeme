@@ -100,12 +100,10 @@ export default function HomepagePost({ post: initialPost, index }: HomepagePostP
                <button
                   type="button"
                   aria-label="Open Actions Modal"
+                  onClick={() => openOwnerActionsModal(post.id)}
                   {...stylex.props(styles.actionsIcon)}
                >
-                  <TbDots
-                     {...stylex.props(styles.actionsIcon)}
-                     onClick={() => openOwnerActionsModal(post.id)}
-                  />
+                  <TbDots {...stylex.props(styles.actionsIcon)} />
                </button>
             )}
          </div>
@@ -135,7 +133,7 @@ export default function HomepagePost({ post: initialPost, index }: HomepagePostP
                   {...stylex.props(styles.iconBarItemButton)}
                >
                   {isLiked ? (
-                     <MdFavorite size={26} color={colors.textPrimary} />
+                     <MdFavorite size={26} color={colors.danger} />
                   ) : (
                      <MdFavoriteBorder size={26} color={colors.textPrimary} />
                   )}

@@ -29,7 +29,6 @@ export const styles = stylex.create({
    },
    link: {
       color: colors.accentText,
-      textDecoration: 'none',
       ':hover': {
          textDecoration: 'underline',
       },

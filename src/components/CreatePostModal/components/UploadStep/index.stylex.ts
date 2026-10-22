@@ -17,7 +17,7 @@ export const styles = stylex.create({
       },
    },
    dropZoneActive: {
-      backgroundColor: 'rgba(74, 93, 249, 0.05)',
+      backgroundColor: 'rgba(255, 105, 40, 0.08)',
    },
    dropText: {
       fontSize: '20px',
@@ -37,7 +37,7 @@ export const styles = stylex.create({
       fontWeight: 600,
       textAlign: 'center',
       ':hover': {
-         backgroundColor: '#4150f7',
+         backgroundColor: colors.accentHover,
       },
    },
 });

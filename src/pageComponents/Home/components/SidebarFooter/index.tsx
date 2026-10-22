@@ -12,7 +12,7 @@ const FOOTER_LINKS = [
    'Terms',
    'Locations',
    'Language',
-   'Zeta Verified',
+   'Digital Trust',
 ];
 
 export default function SidebarFooter() {
@@ -29,7 +29,7 @@ export default function SidebarFooter() {
             ))}
          </div>
          <div {...stylex.props(styles.copyright)}>
-            © {new Date().getFullYear()} Clonagram from Zeta
+            © {new Date().getFullYear()} KnowMeme · AI-Powered Digital Trust
          </div>
       </>
    );

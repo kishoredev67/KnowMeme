@@ -6,8 +6,8 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import z from 'zod';
+import KnowMemeLogo from '@/src/components/KnowMemeLogo';
 import LoginPageButton from '@/src/components/LoginPageButton';
-import ZetaLogo from '@/src/components/ZetaLogo';
 import { supabase } from '@/src/lib/supabase/client';
 import FloatingInput from '../../components/FloatingInput';
 import { colors } from '../../styles/tokens.stylex';
@@ -101,7 +101,11 @@ export default function ResetPasswordPage() {
                text="Go to home"
                onClick={() => router.push('/')}
             />
-            <ZetaLogo rootProps={{ style: { marginTop: '8px' } }} />
+            <KnowMemeLogo
+               size="sm"
+               showTagline={false}
+               rootProps={{ style: { marginTop: '8px' } }}
+            />
          </div>
       </div>
    );

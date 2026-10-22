@@ -19,7 +19,7 @@ export default async function NotFound() {
             <p {...stylex.props(styles.message)}>
                The link you followed may be broken, or the page may have been removed.{' '}
                <Link href="/" {...stylex.props(styles.link)}>
-                  Go back to Clonagram.
+                  Go back to KnowMeme.
                </Link>
             </p>
          </main>

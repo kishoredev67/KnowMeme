@@ -91,7 +91,7 @@ export const styles = stylex.create({
       height: '62px',
       borderRadius: radius.full,
       padding: '2px',
-      background: `linear-gradient(45deg, ${colors.storyGradientStart}, ${colors.storyGradientEnd})`,
+      background: `linear-gradient(135deg, ${colors.storyGradientStart}, ${colors.storyGradientEnd})`,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',

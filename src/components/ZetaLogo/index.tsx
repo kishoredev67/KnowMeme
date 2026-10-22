@@ -1,6 +1,5 @@
 import * as stylex from '@stylexjs/stylex';
-import { MdFilterTiltShift } from 'react-icons/md';
-import { colors } from '../../styles/tokens.stylex';
+import Image from 'next/image';
 import { styles } from './index.stylex';
 
 export interface ZetaLogoProps {
@@ -12,8 +11,19 @@ export interface ZetaLogoProps {
 export default function ZetaLogo({ rootProps, useText = true, iconSize = 20 }: ZetaLogoProps) {
    return (
       <div {...stylex.props(styles.root)} {...rootProps}>
-         <MdFilterTiltShift size={iconSize} style={{ color: colors.textPrimary }} />
-         {useText && <span {...stylex.props(styles.zetaText)}>Zeta</span>}
+         <Image
+            src="/knowmeme-logo.png"
+            alt="KnowMeme"
+            width={iconSize}
+            height={iconSize}
+            {...stylex.props(styles.emblem)}
+         />
+         {useText && (
+            <div {...stylex.props(styles.textRow)}>
+               <span {...stylex.props(styles.knowText)}>Know</span>
+               <span {...stylex.props(styles.memeText)}>Meme</span>
+            </div>
+         )}
       </div>
    );
 }

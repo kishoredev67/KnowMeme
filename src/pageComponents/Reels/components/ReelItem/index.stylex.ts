@@ -72,7 +72,7 @@ export const styles = stylex.create({
       fontWeight: 600,
    },
    verified: {
-      color: colors.accentText,
+      color: colors.brandGreen,
       display: 'flex',
    },
    followButton: {

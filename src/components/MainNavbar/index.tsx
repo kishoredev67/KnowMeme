@@ -1,6 +1,6 @@
 import * as stylex from '@stylexjs/stylex';
-import Image from 'next/image';
 import Link from 'next/link';
+import KnowMemeLogo from '@/src/components/KnowMemeLogo';
 import { getAuthProfile } from '@/src/lib/supabase/getAuthProfile';
 import { getCachedUser } from '@/src/lib/supabase/getCachedUser';
 import { AlsoFromZetaPopover } from './AlsoFromZetaPopover';
@@ -14,19 +14,8 @@ export default async function MainNavbar() {
 
    return (
       <div {...stylex.props(styles.root)}>
-         <Link
-            href="/"
-            {...stylex.props(styles.logo, styles.navItem)}
-            style={{ width: 'fit-content', padding: '8px' }}
-         >
-            <Image
-               src="/clonagram.png"
-               alt="Clonagram"
-               width={22}
-               height={22}
-               style={{ filter: 'brightness(0) invert(1)' }}
-               loading="eager"
-            />
+         <Link href="/" aria-label="KnowMeme Home" {...stylex.props(styles.logoLink)}>
+            <KnowMemeLogo size="md" showTagline={false} />
          </Link>
 
          <nav {...stylex.props(styles.nav)}>

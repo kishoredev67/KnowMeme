@@ -14,6 +14,6 @@ test.describe('unauthenticated', () => {
 
       // Back button returns to the login form
       await page.getByRole('button', { name: 'Back to login' }).click();
-      await expect(page.getByText('Log into Clonagram')).toBeVisible({ timeout: 5000 });
+      await expect(page.getByText('Log into KnowMeme')).toBeVisible({ timeout: 5000 });
    });
 });

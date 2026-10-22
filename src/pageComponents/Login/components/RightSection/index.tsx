@@ -8,8 +8,8 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import z from 'zod';
 import FloatingInput from '@/src/components/FloatingInput';
+import KnowMemeLogo from '@/src/components/KnowMemeLogo';
 import LoginPageButton from '@/src/components/LoginPageButton';
-import ZetaLogo from '@/src/components/ZetaLogo';
 import { supabase } from '@/src/lib/supabase/client';
 import { colors } from '../../../../styles/tokens.stylex';
 import ForgotPassword from './ForgotPassword';
@@ -99,9 +99,13 @@ export default function RightSection({ initialReset, initialError }: RightSectio
             <ForgotPassword onBack={() => setShowForgot(false)} initialError={initialError} />
          ) : (
             <>
-               <div {...stylex.props(styles.titleContainer)}>Log into Clonagram</div>
+               <div {...stylex.props(styles.titleContainer)}>Log into KnowMeme</div>
                <form onSubmit={handleSubmit(signInUser)} style={{ display: 'contents' }}>
-                  <FloatingInput label="Email adress" {...register('email')} autoComplete="email" />
+                  <FloatingInput
+                     label="Email address"
+                     {...register('email')}
+                     autoComplete="email"
+                  />
                   <FloatingInput
                      label="Password"
                      type="password"
@@ -154,7 +158,7 @@ export default function RightSection({ initialReset, initialError }: RightSectio
                />
             </>
          )}
-         <ZetaLogo rootProps={{ style: { marginTop: '8px' } }} />
+         <KnowMemeLogo size="sm" showTagline={false} rootProps={{ style: { marginTop: '8px' } }} />
          <span {...stylex.props(styles.reportContent)}>
             You can also{' '}
             <Link href="/" {...stylex.props(styles.reportContentLink)}>

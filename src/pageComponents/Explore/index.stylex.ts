@@ -33,7 +33,7 @@ export const styles = stylex.create({
       fontWeight: 700,
    },
    headerActive: {
-      color: colors.textPrimary,
+      color: colors.brandOrange,
    },
    headerInactive: {
       color: colors.textSecondary,

@@ -29,12 +29,10 @@ export const styles = stylex.create({
       borderRadius: 8,
       padding: '10px 24px',
       fontWeight: 600,
-      cursor: 'pointer',
    },
    homeLink: {
       color: colors.accentText,
       fontWeight: 600,
       fontSize: 14,
-      textDecoration: 'none',
    },
 });

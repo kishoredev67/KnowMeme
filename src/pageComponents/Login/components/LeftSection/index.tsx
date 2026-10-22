@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useSyncExternalStore } from 'react';
 import { MdFavorite } from 'react-icons/md';
+import KnowMemeLogo from '@/src/components/KnowMemeLogo';
 import loginCardPeople, { type LoginCardPerson } from '../../loginCardPeople';
 import { imageCardStyles, styles } from './index.stylex';
 
@@ -37,16 +38,13 @@ export default function LeftSection() {
    return (
       <div {...stylex.props(styles.root)}>
          <div {...stylex.props(styles.topSection)}>
-            <Image
-               src="/clonagram.png"
-               alt="Clonagram"
-               {...stylex.props(styles.clonagramLogo)}
-               width={76}
-               height={76}
-            />
-            <span {...stylex.props(styles.description)}>
-               See everyday moments from your close friends.
-            </span>
+            <div {...stylex.props(styles.knowmemeLogo)}>
+               <KnowMemeLogo size="lg" showTagline={false} />
+            </div>
+            <h2 {...stylex.props(styles.description)}>
+               Authentic moments. Real connections.{' '}
+               <span {...stylex.props(styles.trustHighlight)}>AI-Powered Digital Trust.</span>
+            </h2>
          </div>
 
          <div {...stylex.props(styles.imagesContainer)}>
@@ -121,7 +119,7 @@ function ImageCard({ image, rotation, scale, translateX, translateY, zIndex }: I
             </div>
             <div {...stylex.props(imageCardStyles.reactionBoxContainer)}>
                <div {...stylex.props(imageCardStyles.commentBorder)}></div>
-               <MdFavorite size={38} />
+               <MdFavorite size={38} color="#FF6928" />
             </div>
          </Link>
       </div>
