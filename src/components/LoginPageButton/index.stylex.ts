@@ -19,16 +19,19 @@ export const styles = stylex.create({
    transparent: {
       backgroundColor: 'transparent',
       border: 'none',
+      color: colors.textSecondary,
       ':hover': {
          backgroundColor: colors.buttonHover,
+         color: colors.textPrimary,
       },
    },
    primary: {
       backgroundColor: colors.accent,
+      color: colors.white,
       fontSize: '15px',
       ':disabled': {
-         color: colors.textSecondary,
-         opacity: 0.6,
+         color: 'rgba(255, 255, 255, 0.65)',
+         opacity: 0.65,
       },
       ':hover': {
          backgroundColor: colors.accentHover,

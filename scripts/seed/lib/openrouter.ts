@@ -160,7 +160,7 @@ export async function generateProfileBatch(specs: ProfileSpec[]): Promise<RawPro
       .map((s, i) => `  ${i + 1}. niche=${s.niche}, archetype=${s.archetype}`)
       .join('\n');
 
-   const prompt = `Generate ${count} distinct Instagram profiles. Each must match its assigned niche and archetype.
+   const prompt = `Generate ${count} distinct KnowMeme profiles. Each must match its assigned niche and archetype.
 
 Profiles:
 ${specList}
@@ -175,9 +175,9 @@ Return a JSON object with a single key "profiles" containing an array of exactly
 {
   "username": string (lowercase, dots/underscores only, max 20 chars, niche-flavored, globally unique),
   "full_name": string (believable Western first + last name),
-  "bio": string (1-3 short lines, casual Instagram tone, may include emojis, max 150 chars total),
+  "bio": string (1-3 short lines, casual social media tone, may include emojis, max 150 chars total),
   "website": string | null (a REAL, actually existing website URL relevant to the profile's niche — a well-known brand site, a real creator's site, a popular niche magazine. Include https://. Must actually exist on the internet. null if unsure),
-  "comment_pool": string[] (15 casual Instagram comments this persona would leave on other posts — match their archetype voice, bio quirks, and niche; 5-15 words each; mix reactions, questions, and compliments; influencers sound informed, lurkers sound casual, dormant sound generic),
+  "comment_pool": string[] (15 casual social comments this persona would leave on other posts — match their archetype voice, bio quirks, and niche; 5-15 words each; mix reactions, questions, and compliments; influencers sound informed, lurkers sound casual, dormant sound generic),
   "posts": [ { "caption": string (1-2 sentences + 3-6 hashtags, niche-appropriate, in the persona's voice) } ] (at least 8 posts),
   "stories": [ { "description": string (one sentence describing the story image) } ] (at least 12 stories),
   "highlights": [ { "title": string (max 15 chars, niche-appropriate) } ] (at least 4 highlights),
@@ -225,13 +225,13 @@ export async function generatePostContent(
                content: [
                   {
                      type: 'text',
-                     text: `You are analyzing an Instagram post image for a ${niche} content creator whose bio is: "${bio}".
+                     text: `You are analyzing a KnowMeme post image for a ${niche} content creator whose bio is: "${bio}".
 
 Return a JSON object with exactly these keys:
 {
-  "caption": "Instagram caption (1-2 sentences + 3-5 hashtags) that specifically describes what's in this image, written in the creator's voice",
+  "caption": "Post caption (1-2 sentences + 3-5 hashtags) that specifically describes what's in this image, written in the creator's voice",
   "alt_text": "concise image description for accessibility, under 80 characters, focus on what is visually present",
-  "comments": ["comment 1", "comment 2", "comment 3"] (3 short casual comments from other Instagram users, 5-15 words each, specifically referencing something visible in the image, no hashtags)
+  "comments": ["comment 1", "comment 2", "comment 3"] (3 short casual comments from other KnowMeme users, 5-15 words each, specifically referencing something visible in the image, no hashtags)
 }
 
 Return ONLY valid JSON.`,
