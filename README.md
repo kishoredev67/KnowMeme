@@ -116,8 +116,8 @@ Data is stored and synchronized through Supabase (Postgres, Storage, and Realtim
 1. Clone the repo and install dependencies:
 
    ```bash
-   git clone https://github.com/zivavu/Clonagram.git
-   cd Clonagram
+   git clone https://github.com/kishoredev67/KnowMeme.git
+   cd KnowMeme
    bun install
    ```
 
@@ -268,4 +268,4 @@ bun run seed:cleanup
 
 Tomasz Kierzenkowski - zivavu@gmail.com
 
-Project Link: https://github.com/zivavu/Clonagram
+Project Link: https://github.com/kishoredev67/KnowMeme
